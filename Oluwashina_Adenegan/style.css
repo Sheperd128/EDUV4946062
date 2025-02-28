@@ -1,0 +1,150 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+    color: #222;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #FF6B6B;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: auto;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    color: white;
+    background: #ff4081;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ff80ab;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #FF6B6B;
+    margin-bottom: 1rem;
+}
+
+/* Countdown Timer */
+#countdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #ffedcc;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+/* Featured Projects */
+.project {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Coding Challenge */
+pre {
+    background: #282c34;
+    color: #61dafb;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Testimonials */
+#testimonials {
+    font-style: italic;
+    background: #fce4ec;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Contact & Social Media */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socials li a {
+    background: #FF6B6B;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.socials li a:hover {
+    background: #ff4081;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #FF6B6B;
+    color: white;
+    margin-top: 2rem;
+}

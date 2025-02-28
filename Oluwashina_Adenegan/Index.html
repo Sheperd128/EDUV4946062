@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Logo.jpg">
+    <script src="https://kit.fontawesome.com/071afec762.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🚀 Welcome to the Coding Club</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="countdown">
+        <h2>Next Event Starts In:</h2>
+        <p id="timer">Loading...</p>
+    </section>
+
+    <section id="video">
+       <video src="Coding club.mp4" height="500px" controls autoplay muted loop> </video>
+    </section>
+
+    <section id="featured-projects">
+        <h2>Featured Member Projects 🎨</h2>
+        <div class="project">
+            <h3>AI Chatbot</h3>
+            <p>An interactive chatbot built with Python and AI.</p>
+        </div>
+        <div class="project">
+            <h3>Personal Portfolio</h3>
+            <p>A creative portfolio website made with HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
+
+    <section id="coding-challenge">
+        <h2>Today's Coding Challenge 🧩</h2>
+        <p>Can you write a function that reverses a string?</p>
+        <pre><code>function reverseString(str) {
+  return str.split('').reverse().join('');
+}</code></pre>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Members Say 💬</h2>
+        <p>"This club helped me land my first internship!" - Alex</p>
+        <p>"I learned so much and made amazing friends!" - Jamie</p>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact & Social Media 📱</h2>
+        <p>Follow us on:</p>
+        <ul class="socials">
+            <li><a href="http://tiktok.com/@codingclub404"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li><a href="https://www.instagram.com/codingclub404?igsh=MTB4amQzNWxnZDgzeg=="><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://github.com/CODINGCLUB404"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/coding-club-3841b1349"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coding Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function updateCountdown() {
+                const eventDate = new Date("2025-06-01T00:00:00").getTime();
+                const now = new Date().getTime();
+                const timeLeft = eventDate - now;
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        });
+    </script>
+</body>
+</html>
